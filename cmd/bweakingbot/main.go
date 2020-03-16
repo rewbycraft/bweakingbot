@@ -123,7 +123,7 @@ func postFeedItem(item *gofeed.Item, feed *gofeed.Feed) {
 
 }
 
-func pollTwitter(name string) {
+func pollTwitter(name string, avatar string) {
 
 	if _, ok := lastActualTime[name]; !ok {
 		lastActualTime[name] = time.Now()
@@ -131,11 +131,6 @@ func pollTwitter(name string) {
 
 	log.Printf("Polling @%s for tweets sent after %s...", name, lastActualTime[name].Format(time.UnixDate))
 	var lastFoundTweetTime *time.Time = nil
-	profile, err := twitterscraper.GetProfile(name)
-	if err != nil {
-		log.Printf("Error polling data from @%s: %+v", name, err)
-		return
-	}
 	for tweet := range twitterscraper.GetTweets(name, 1) {
 		if tweet.Error != nil {
 			log.Println(tweet.Error)
@@ -143,7 +138,7 @@ func pollTwitter(name string) {
 		}
 		if tweet.TimeParsed.After(lastActualTime[name]) {
 
-			postTweet(tweet, name, profile.Avatar)
+			postTweet(tweet, name, avatar)
 
 			if lastFoundTweetTime == nil || tweet.TimeParsed.After(*lastFoundTweetTime) {
 				lastFoundTweetTime = &tweet.TimeParsed
@@ -189,9 +184,12 @@ func pollTwitterAccounts() {
 	accounts := []string{
 		"BBCBweaking",
 	}
+	avatars := []string{
+		"https://pbs.twimg.com/profile_images/1114682314729099265/s2UTPyit_200x200.png",
+	}
 
-	for _, acct := range accounts {
-		pollTwitter(acct)
+	for i, acct := range accounts {
+		pollTwitter(acct, avatars[i])
 	}
 }
 
