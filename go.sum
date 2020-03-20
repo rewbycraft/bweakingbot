@@ -13,6 +13,8 @@ github.com/n0madic/twitter-scraper v0.0.0-20200306085002-da8e58d26c77 h1:WDLxuWq
 github.com/n0madic/twitter-scraper v0.0.0-20200306085002-da8e58d26c77/go.mod h1:VZADi02o1/HsNTTCPqT8kFK+RGwzVdYVdpatmzJ6Ap4=
 github.com/rewbycraft/gOwO v0.0.0-20200316230246-c289c366780a h1:ErMvrpWN6q2lnqAX5kglW+xcMcP2YrHF9TZc2b2ymBQ=
 github.com/rewbycraft/gOwO v0.0.0-20200316230246-c289c366780a/go.mod h1:1WVAef/dh9a26sEV/t7tqw4ZTWVTOewWN6L8txz2NHU=
+github.com/rewbycraft/gOwO v0.0.0-20200320140007-22e1699ccc14 h1:qFGpBM/1DgCc1kSvSfMHsqz/N3iWndnH8qVMxWcWGkE=
+github.com/rewbycraft/gOwO v0.0.0-20200320140007-22e1699ccc14/go.mod h1:1WVAef/dh9a26sEV/t7tqw4ZTWVTOewWN6L8txz2NHU=
 github.com/robfig/cron v1.2.0 h1:ZjScXvvxeQ63Dbyxy76Fj3AT3Ut0aKsyd2/tl3DTMuQ=
 github.com/robfig/cron/v3 v3.0.1 h1:WdRxkvbJztn8LMz/QEvLN5sBU+xKpSqwwUO1Pjr4qDs=
 github.com/robfig/cron/v3 v3.0.1/go.mod h1:eQICP3HwyT7UooqI/z+Ov+PtYAWygg1TEWWzGIFLtro=
